@@ -1,0 +1,28 @@
+<html><head> 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv311111Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"> 
+ </head> 
+ <body bgcolor="#00000">
+  <h1> <font color="GREEN">Francisco Hiram Castellanos Gonzalez</font> </h1> 
+  <!--Documentación del Sistema de Grid de Boostrap (https://getbootstrap.com/docs/4.0/layout/grid/) --> 
+  <div id="app" class="container"> 
+   <div class="row"> 
+    <div class="cold-md"> 
+     <ul> 
+      <li v-for="poke in pokes"> <font color="RED"> <font face="Times New"> {{poke.name}} -- </font> <button> 
+         <btn class="btn btn-success" v-bind:href="poke.url" v-on:click="pokesImg(poke.url)">
+          {{poke.url}}
+         </btn> </button> </font> <br><br> </li> 
+     </ul> 
+    </div> 
+    <font color="BLUE"><font size="5">Aqui vamos a poner la imagen del pokemon--&gt;</font></font> 
+    <br>
+    <br> 
+    <div class="col-sm"> 
+     <img width="50%" heigth="50%" v-bind:src="pokeImg.dream_world.front_default"> 
+    </div> 
+   </div> 
+  </div> 
+ 
+</body></html>
